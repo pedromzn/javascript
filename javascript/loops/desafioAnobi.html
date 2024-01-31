@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio ano bisexto</h1>
+
+    <script>
+        for(let ano = 1000; ano <= 2024; ano+=4){
+
+            let anoBissexto = ano % 100 != 0 || ano % 400 === 0
+
+            if(anoBissexto){
+                document.write(ano + ' é ano bissexto' + '<br>')
+            }else{
+
+                document.write(ano, ' não é ano bissexto' + '<br>')
+            }
+        }
+    </script>
+</body>
+</html>
