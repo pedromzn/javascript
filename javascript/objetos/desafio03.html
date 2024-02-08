@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <script>
+        const endereco = {
+            rua: 'Ibirapuã',
+            numero: 159
+        }
+        const pessoa = {
+            nome: 'joão',
+            sobrenome: 'Fagundes',
+            endereco
+        }
+        //loop for ... in server para interagir com um objeto
+        for (let prop in pessoa){
+            console.log(prop) 
+            //console.log(pessoa.prop) // isto causa um undefinid
+            console.log(pessoa[prop])
+
+        }
+    </script>
+</body>
+</html>
