@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Treinamento</h1>
+    <h2>Jogos competitivos</h2>
+
+    <ul id="lista">
+
+    </ul>
+    <h2>Jogos de aventura</h2>
+
+    <ul id="listaAve">
+
+    </ul>
+
+    <script>
+        const jogos = [
+            {
+                nome:'Red Dead',
+                nota: 4
+            },
+
+            {
+                nome: 'God of war',
+                nota: 5
+            },
+
+            {
+                nome: 'Zelda',
+                nota: 5
+            }
+
+        ]
+        const jogos2 = [
+            {
+                nome: 'Lol',
+                nota: 3
+            },
+
+            {
+                nome: 'Cs go',
+                nota: 4
+            },
+
+            {
+                nome: 'Dota',
+                nota: 2
+            }
+        ]
+
+        const listaComp = document.getElementById('lista')
+        const listaAve = document.getElementById('listaAve')
+
+        for(i = 0; i < jogos.length; i++){
+
+         listaAve.innerHTML += `<li> ${jogos[i].nome} : ${jogos[i].nota} </li>`
+        }
+        for(i = 0; i < jogos2.length; i++){
+            listaComp.innerHTML += `<li> ${jogos2[i].nome} : ${jogos2[i].nota} </li>`
+        }
+
+    </script>
+</body>
+</html>

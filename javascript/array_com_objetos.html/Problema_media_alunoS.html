@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+        <!-- <li>Pedro
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </li>
+    </ul> -->
+    <script>
+        const alunos = [
+            {nome: 'Pedro', notas: [10, 2, 7, 6]},
+            {nome: 'Lucas', notas: [7, 5, 7, 4]},
+            {nome: 'Larissa', notas: [10, 9, 9, 7]}
+        ]
+
+        const listaAlunos = document.getElementById('lista')
+        let alunosHtml = ""
+
+        for(i = 0; i < alunos.length; i++){
+            alunosHtml += `<li> ${alunos[i].nome}`
+            alunosHtml += '<ul>'
+
+            for(j = 0; j < alunos[i].notas.length; j++){
+                alunosHtml += `<li>${alunos[i].notas[j]}</li>`
+            }
+
+            alunosHtml += '</ul>'
+            alunosHtml += '</ul>'
+        }
+
+        listaAlunos.innerHTML = alunosHtml
+    </script>
+</body>
+</html>

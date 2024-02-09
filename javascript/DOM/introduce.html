@@ -16,8 +16,23 @@
         <input type="text" id="user" value="valor prenchido">
     </form>
 
+    <hr>
+
+    <h2>Lista DOM</h2>
+
+    <ol id="lista">
+        <li>Testeb 1</li>
+        <li>Teste 2</li>
+        <li>Teste 3</li>
+    </ol>
+
     <script>
         let user = document.getElementById('user')
+
+        const lista = document.getElementById('lista')
+        let novoItem = '<li>teste 4</li>'
+
+        lista.innerHTML += novoItem
     </script>
 </body>
 </html>
