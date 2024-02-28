@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangolo</title>
+</head>
+<body>
+    <label>
+        <base href="">
+        <input type="number" id="base" placeholder="digite a base do triangulo">
+    </label>
+    <label>
+        Altura
+        <input type="number" id="altura" placeholder="Digite a Altura do triangulo">
+    </label>
+    <button onclick="CalculaArea()">Calcular área</button>
+    <output id="output"></output>
+    <script>
+        const output = document.getElementById('output')
+        const base = document.getElementById('base')
+        const altura = document.getElementById('altura')
+        
+        function CalculaArea(){
+            let baseArea = base.value
+            let alturaArea = altura.value
+            let area = baseArea * alturaArea / 2
+
+            output.innerHTML = ` Area do triangulo de base ${baseArea} e altura ${alturaArea} é ${area}`
+        }
+
+        base.addEventListener('keyup', function(e){
+            let key = e.which || e.keyCode
+            if(key === 13){
+                CalculaArea()
+            }
+        })
+        altura.addEventListener('keyup', function(e){
+            let key = e.which || e.keyCode
+            if(key === 13){
+                CalculaArea()
+            }
+        })
+    </script>
+</body>
+</html>

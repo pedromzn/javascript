@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            overflow-x: hidden;
+            background-color: rgb(66, 66, 192);
+            padding: 20px;
+            display: flex;
+            height: 40px;
+            justify-content: right;
+        }
+        .hamburger {
+            cursor: pointer;
+        }
+        .line {
+            height: 5px;
+            margin-top: 10px;
+            width: 40px;
+            background-color: white;
+        }
+        .list-hero {
+            list-style: none;
+            font-size: 25px;
+            position: absolute;
+            top: 9vh;
+            right: 0;
+            width: 40vw;
+            padding: 20px;
+            height: 90vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateX(-1000px);
+            transition: transform 0.5s ease-in;
+        }
+        .list-hero.active {
+            transition: 1s;
+            transform: translateX(-1%);
+        }
+        .line-2.active {
+            display: none;
+        }
+        .line-1.active,
+        .line-3.active
+        {
+            z-index: 1;
+            transition: 1s;
+            position: absolute;
+            right: 2vw;
+            top:15vh;
+            transform: rotate(45deg);
+        }
+        .line-3.active {
+           transform: rotate(-45deg);
+        }
+        .list-hero li {
+            margin-top: 10px;
+        }
+        .list-hero a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-hero">
+            <div class="hamburger">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+            <ul class="list-hero">
+                <a href=""><li>home</li></a>
+                <a href=""><li>content</li></a>
+                <a href=""><li>Projects</li></a>
+                <a href=""><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const hamburger = document.querySelector('.hamburger')
+        const lista = document.querySelector('.list-hero')
+        const line1 = document.querySelector('.line-1')
+        const line3 = document.querySelector('.line-3')
+        const line2 = document.querySelector('.line-2')
+
+        hamburger.addEventListener('click', () =>{
+            lista.classList.toggle('active')
+            line1.classList.toggle('active')
+            line3.classList.toggle('active')
+            line2.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
